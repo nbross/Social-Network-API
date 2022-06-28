@@ -23,19 +23,22 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
 
 ## Installation
-The following necessary dependencies must be installed to run the application properly: Node.js, dotenv, bcrypt, mysql, sequelize, express, express-handlebars, handlebars, connect-session-sequelize and a terminal.
+The following necessary dependencies must be installed to run the application properly: Node.js, express, mongoose, mongodb, and a terminal.
 
 ## Run App
-The following commands are needed to run the app: source db/schema.sql(in sql shell), create an .env and import your info, npm start.
+The following commands are needed to run the app: npm i, and npm start.
 
 ## Problem!!!
-The site really work tried a few stuff to fix it but kind of ran out time. The page loads and you can login, but nothing happens after. I've code all the view and routes to have the site let the users to create posts and comment 
+I don't know why but you can't pull up a user by ID, but you can do everything else. Also while recording the demonstration I came across anther bug where I can't post reactions. This problem are still at large and I am aware of them.
 ## Screenshot
 
 ![Social-Network-API](/assets/images/2022-06-27.png)
 
+## Demonstration Videos
+[A walk-through video of the Server Start](./assets/videos/Vid%201.webm)
+
+[A video of Back End in Insomnia](./assets/videos/Vid%202.webm)
+
 ## Repo link
 
 Git Hub Repo: https://github.com/nbross/Social-Network-API
-
-Walk-through Video: 
