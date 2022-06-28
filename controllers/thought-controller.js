@@ -24,7 +24,7 @@ const thoughtController = {
             });
     },
 
-    // create thought user
+    // create thought user /api/thoughts
     createThought({ params, body }, res) {
         console.log(params);
         Thought.create(body)
@@ -40,7 +40,7 @@ const thoughtController = {
             .catch(err => res.json(err));
     },
 
-    // update thought by id
+    // update thought by id /api/thoughts/:id
     updateThought({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
@@ -57,7 +57,7 @@ const thoughtController = {
             .catch(err => res.json(err));
     },
 
-    // delete a thought by id
+    // delete a thought by id /api/thoughts/:id
     deleteThought({ params }, res) {
         Thought.findOneAndDelete({ _id: params.thoughtId })
             .then(deletedThought => {
@@ -68,7 +68,7 @@ const thoughtController = {
             .catch(err => res.json(err));
     },
 
-    // add a Reaction
+    // add a Reaction /api/thoughts/thoughtID/reactions/
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
@@ -96,8 +96,5 @@ const thoughtController = {
             .catch(err => res.json(err));
     }
 };
-
-
-
 
 module.exports = thoughtController;
